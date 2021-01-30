@@ -4,7 +4,9 @@ import { useState } from "react";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
-
+  const [random, setRandom] = useState(() => {
+    return Math.random();
+  });
   console.log("rerendered");
   return (
     <div className="App">
@@ -17,6 +19,7 @@ export default function App() {
         {" "}
         Count - 1{" "}
       </button>
+      <p>Random value: {random}</p>
     </div>
   );
 }
