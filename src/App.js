@@ -3,12 +3,16 @@ import "./styles.css";
 import { useState } from "react";
 
 export default function App() {
-  const state = useState("Hello World");
-  console.log(state);
+  const [counter, setCounter] = useState(0);
+  const updateCounter = () => {
+    let a = counter + 1;
+    setCounter(a);
+  };
+  console.log("rerendered");
   return (
     <div className="App">
-      {state[0]}
-      <button onClick={() => state[1]("hello")}>Change Test</button>
+      {counter}
+      <button onClick={() => updateCounter()}>Count +1</button>
     </div>
   );
 }
