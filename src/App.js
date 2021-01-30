@@ -8,9 +8,14 @@ export default function App() {
   console.log("rerendered");
   return (
     <div className="App">
-      {counter}
+      {counter} <br></br>
+      <br></br>
       <button onClick={() => setCounter((prevState) => prevState + 1)}>
-        Count +1
+        Count + 1
+      </button>
+      <button onClick={() => setCounter((prevState) => prevState - 1)}>
+        {" "}
+        Count - 1{" "}
       </button>
     </div>
   );
