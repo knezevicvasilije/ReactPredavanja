@@ -3,7 +3,12 @@ import "./styles.css";
 import { useState } from "react";
 
 export default function App() {
-  const state = useState("Test");
+  const state = useState("Hello World");
   console.log(state);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      {state[0]}
+      <button onClick={() => state[1]("hello")}>Change Test</button>
+    </div>
+  );
 }
