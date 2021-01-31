@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function App() {
   const [counter, setCounter] = useState(0);
+  const [search, setSearch] = useState("");
   const [random, setRandom] = useState(() => {
     return Math.random();
   });
@@ -37,6 +38,14 @@ export default function App() {
       </button> */}
       <p>Random value: {random}</p>
       <button onClick={() => setRandom(Math.random())}>Randomize</button>
+      <br></br> <br></br>
+      <label htmlFor="search">Search</label> <br></br>
+      <input
+        type="text"
+        id="search"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
     </div>
   );
 }
