@@ -14,9 +14,15 @@ export default function App() {
   useEffect(() => {
     console.log("Izvrsena useEffect sa []");
   }, []);
+
   useEffect(() => {
     console.log("Izvrsena useEffect sa [rabdin]");
+
+    return () => {
+      console.log(random, "IUzvresna cleanup fja");
+    };
   }, [random]);
+
   // console.log("rerendered");
   return (
     <div className="App">
