@@ -8,6 +8,7 @@ export default function App() {
     return Math.random();
   });
   //Thats all for today 23min
+
   console.log("rerendered");
   return (
     <div className="App">
@@ -24,3 +25,4 @@ export default function App() {
     </div>
   );
 }
+//useEffect
