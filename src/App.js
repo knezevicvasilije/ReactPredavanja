@@ -11,7 +11,13 @@ export default function App() {
     console.log("Izvrsen useEffect fja");
   });
 
-  console.log("rerendered");
+  useEffect(() => {
+    console.log("Izvrsena useEffect sa []");
+  }, []);
+  useEffect(() => {
+    console.log("Izvrsena useEffect sa [rabdin]");
+  }, [random]);
+  // console.log("rerendered");
   return (
     <div className="App">
       {counter} <br></br>
@@ -19,11 +25,12 @@ export default function App() {
       <button onClick={() => setCounter((prevState) => prevState + 1)}>
         Count + 1
       </button>
-      <button onClick={() => setCounter((prevState) => prevState - 1)}>
+      {/*    <button onClick={() => setCounter((prevState) => prevState - 1)}>
         {" "}
         Count - 1{" "}
-      </button>
+      </button> */}
       <p>Random value: {random}</p>
+      <button onClick={() => setRandom(Math.random())}>Randomize</button>
     </div>
   );
 }
