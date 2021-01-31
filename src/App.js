@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import { useState } from "react";
 
@@ -7,7 +7,9 @@ export default function App() {
   const [random, setRandom] = useState(() => {
     return Math.random();
   });
-  //Thats all for today 23min
+  useEffect(() => {
+    console.log("Izvrsen useEffect fja");
+  });
 
   console.log("rerendered");
   return (
@@ -25,4 +27,3 @@ export default function App() {
     </div>
   );
 }
-//useEffect
